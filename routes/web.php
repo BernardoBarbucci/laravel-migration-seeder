@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+// controller del treno
+use App\Http\Controllers\TrainController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('layout.app');
 });
+
+Route::get('/treni', [TrainController::class, 'index']);
