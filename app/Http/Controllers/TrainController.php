@@ -11,7 +11,7 @@ class TrainController extends Controller
     public function index()
     {
         $trains = Train::all();
-        return view('partials.main',  ['trains' => $trains]);
+        return view('guest.train.index', compact('trains'));
 
         // dd($trains);
     }
